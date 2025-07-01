@@ -1,0 +1,139 @@
+body {
+  background-color: var(--neutral-dark);
+  font-family: "Outfit", sans-serif;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 0px 15px;
+}
+
+.nft-card {
+  max-width: 350px;
+  background-color: var(--neutral-medium);
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.image-link .image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.image-link {
+  position: relative;
+  display: flex;
+}
+
+.image-link::before {
+  content: "";
+  background-color: cyan;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+  border-radius: 10px;
+}
+
+.image-link::after {
+  content: "";
+  background: url(../src/images/icon-view.svg) no-repeat center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+  border-radius: 10px;
+}
+
+.image-link:hover::before {
+  opacity: 0.4;
+}
+
+.image-link:hover::after {
+  opacity: 1;
+}
+
+.title-link .title {
+  font-size: 22px;
+  color: #ffffff;
+  margin: 25px 0px 10px;
+}
+
+.title-link .title:hover {
+  color: var(--primary-medium);
+}
+
+.about {
+  color: var(--primary-soft);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 23px;
+}
+
+.info .price {
+  color: var(--primary-medium);
+  display: flex;
+  align-items: center;
+}
+
+.info .price::before {
+  content: "";
+  background: url(../src/images/icon-ethereum.svg) no-repeat center;
+  width: 11px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.info .days-left {
+  color: var(--primary-soft);
+  display: flex;
+  align-items: center;
+}
+
+.info .days-left::before {
+  content: "";
+  background: url(../src/images/icon-clock.svg) no-repeat center;
+  width: 20px;
+  height: 25px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.creator {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--neutral-soft);
+  padding-top: 15px;
+}
+
+.creator img {
+  max-width: 35px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.creator .text {
+  color: var(--primary-soft);
+}
+
+.creator .name {
+  color: #ffffff;
+}
+
+.creator .name:hover {
+  color: var(--primary-medium);
+}
